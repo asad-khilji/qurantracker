@@ -1,1 +1,26 @@
-
+[
+  {
+    "number": 1,
+    "name": "الفاتحة",
+    "english": "Al-Fatihah",
+    "ayahs": 7
+  },
+  {
+    "number": 2,
+    "name": "البقرة",
+    "english": "Al-Baqarah",
+    "ayahs": 286
+  },
+  {
+    "number": 3,
+    "name": "آل عمران",
+    "english": "Ali 'Imran",
+    "ayahs": 200
+  },
+  {
+    "number": 4,
+    "name": "النساء",
+    "english": "An-Nisa",
+    "ayahs": 176
+  }
+]
