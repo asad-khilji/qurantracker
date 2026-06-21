@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quran Memorization Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Quran Memorization Tracker</h1>
+    <p>Track what you have memorized and reviewed.</p>
+  </header>
+
+  <main class="container">
+    <section class="card stats">
+      <div>
+        <strong id="memorizedCount">0</strong>
+        <span>Surahs memorized</span>
+      </div>
+      <div>
+        <strong id="totalAyahs">0</strong>
+        <span>Ayahs memorized</span>
+      </div>
+      <div>
+        <strong id="progressPercent">0%</strong>
+        <span>Progress</span>
+      </div>
+    </section>
+
+    <section class="card controls">
+      <input id="searchInput" type="search" placeholder="Search surah..." />
+      <select id="filterSelect">
+        <option value="all">All surahs</option>
+        <option value="memorized">Memorized</option>
+        <option value="not-memorized">Not memorized</option>
+      </select>
+      <button id="resetBtn" class="danger">Reset Progress</button>
+    </section>
+
+    <section id="surahList" class="surah-list"></section>
+  </main>
+
+  <template id="surahTemplate">
+    <article class="card surah-card">
+      <div class="surah-top">
+        <div>
+          <h2 class="surah-name"></h2>
+          <p class="surah-meta"></p>
+        </div>
+        <label class="switch-wrap">
+          <input class="memorized-check" type="checkbox" />
+          <span>Memorized</span>
+        </label>
+      </div>
+
+      <label>
+        Ayahs memorized
+        <input class="ayah-input" type="number" min="0" />
+      </label>
+
+      <label>
+        Last reviewed
+        <input class="review-input" type="date" />
+      </label>
+
+      <label>
+        Notes
+        <textarea class="notes-input" rows="3" placeholder="Weak ayahs, revision notes, teacher feedback..."></textarea>
+      </label>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
